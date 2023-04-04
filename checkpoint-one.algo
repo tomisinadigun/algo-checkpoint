@@ -1,0 +1,50 @@
+ALGORITHM 
+VAR
+    // variables
+    sentence: STRING := "A computer algorithm then classified people according to the behaviour.";
+
+    // last character in the sentence 
+    last_character: STRING := "."
+
+    // initializing character count variable
+    character_count: INTEGER := 0;
+
+    // initializing word count variable 
+    word_count : INTEGER:= 0;
+
+    vowel_count: INTEGER:= 0;
+
+BEGIN
+
+    // the for loop checks through the sentence 
+    FOR i FROM sentence DO
+        // while the value of i is not equal to the sentence last character which is dot(.)
+        WHILE (i <> last_character) DO
+            // increament character_count by one
+            character_count := character_count + 1;
+
+            // checks if i is equal to space. when i is equal to space, word_count is increased by 1 
+            IF (i = " ") THEN
+                word_count: = character_count + 1
+            END_IF
+
+            // if the value of i is equal to any of the vowel alphabets, increase vowel_count by one 
+            IF (i = "a" or "e" or "i" or "o" or "u") THEN
+                vowel_count: = vowel_count + 1
+            END_IF
+
+        END_WHILE
+
+    END_FOR
+
+    // output the character_count when iteraiton is done 
+    Write ("Character_count = " character_count)
+    // output the word_count when iteraiton is done 
+    Write ("Word_count = " word_count + 1)
+
+    // output the vowel_count when iteraiton is done 
+    Write ("vowel_count = " word_count + 1)
+END
+
+
+
